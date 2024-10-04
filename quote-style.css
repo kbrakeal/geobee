@@ -1,0 +1,150 @@
+:root {
+    --teal-color: #25757A;
+    --storm-color: #627776;
+    --mint-color: #D5E8D6;
+    --newleaf-color: #AACC91;
+    --cream-color: #E6E6E6;
+    --forest-color: #133325;
+    --font-family: 'Montserrat', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-size-medium: 16px;
+}
+
+/* General Components */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--cream-color);
+}
+h1 {
+    color: var(--forest-color);
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+input {
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--forest-color);
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Top Nav Section */
+.top-nav {
+    margin: 0;
+    background-color: var(--cream-color);
+}
+.top-nav-content {
+    margin: 0 10%;
+    padding: 2px 0;
+}
+.nav-logo {
+    align-items: center;
+    height: 74px;
+    width: auto;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.row-list-item {
+    margin-left: 32px;
+    white-space: nowrap;
+    color: var(--forest-color);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Application Form */
+.application-form {
+    margin: 5% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+button {
+    background-color: var(--newleaf-color);
+    color: var(--cream-color);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-medium);
+}
+button:hover {
+    background-color: var(--teal-color);
+}
+
+/* Footer Section */
+footer {
+    background-color: #008080;
+    margin-top: 80px;
+}
+.footer-content {
+    color: var(--cream-color);
+    margin: 0 10%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+.nav-links a {
+    color: var(--cream-color);
+    text-decoration: none;
+    margin-right: 24px;
+}
+.right-section {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.social-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: start;
+}
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 128px;
+}
+.social-icons .uil {
+    font-size: 30px;
+    color: var(--cream-color);
+}
