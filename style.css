@@ -215,6 +215,7 @@ button {
 }
 .review-title {
     font-size: var(--font-size-large);
+    text-align: center;
 }
 .carousel {
     height: 60%;
@@ -486,5 +487,11 @@ footer {
     }
     .social-title {
         font-size: 1em;
+    }
+}
+
+@media (max-width: 424px) {
+    .card {
+        flex: 0 0 99%; /* Each card takes up all of the carousel on mobile, adjusted for 1% total margins */
     }
 }

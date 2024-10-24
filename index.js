@@ -4,17 +4,25 @@ const bubblesContainer = document.getElementById('bubblesContainer');
 const totalCards = document.querySelectorAll('.card').length;
 let currentIndex = 0;
 let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-let isMobileView = vw <= 768;
-let itemsToShow = (isMobileView) ? 2 : 3;
+let itemsToShow = getNumItemsToShow(vw);
 generateBubbles();
 
 window.addEventListener('resize', () => resizeCards())
 
+/* View sizes: 
+    Desktop:        > 768
+    Mid/Tab:        <= 768
+    Small/Mobile:   <= 424
+*/
+function getNumItemsToShow(viewWidth) {
+    return (viewWidth <= 768) ? ((viewWidth <= 424) ? 1 : 2) : 3;
+}
+
 function resizeCards() {
     vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (isMobileView != (vw <= 768)) {
-        isMobileView = vw <= 768;
-        itemsToShow = (isMobileView) ? 2 : 3;
+    let newItemsToShow = getNumItemsToShow(vw);
+    if (newItemsToShow != itemsToShow) {
+        itemsToShow = newItemsToShow;
         while (bubblesContainer.firstChild) {
             bubblesContainer.removeChild(bubblesContainer.lastChild);
         }
@@ -24,7 +32,6 @@ function resizeCards() {
     moveToIndex((currentIndex >= totalBubbles) ? totalBubbles - 1 : currentIndex);
 }
 
-// Generate bubbles
 function generateBubbles() {
     const totalBubbles = Math.ceil(totalCards / itemsToShow);
     for (let i = 0; i < totalBubbles; i++) {
