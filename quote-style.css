@@ -33,6 +33,11 @@ input {
     border-radius: 5px;
 }
 
+.wrapper {
+    min-height: 84vh;
+    align-content: center;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -147,4 +152,36 @@ footer {
 .social-icons .uil {
     font-size: 30px;
     color: var(--cream-color);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 5%; /* Reduce side margins */
+        margin-right: 5%; /* Reduce side margins */
+    }
+
+    .top-nav-content {
+        justify-content: center;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+    .nav-links a {
+        margin: 1em 0 0 24px;
+    }
+    .right-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .social-title {
+        font-size: 1em;
+    }
 }
